@@ -42,7 +42,7 @@ beforeAll(async () => {
     productId: product.id
   }
 
-  Cart.create({ quantity: 1 })
+  // Cart.create({ quantity: 1 })
 
 })
 
@@ -57,7 +57,6 @@ test("POST -> 'URL_BASE', should return status code 201, res.body to be de defin
   expect(res.body).toBeDefined()
   expect(res.body.quantity).toBe(bodyCart.quantity)
   expect(res.body.userId).toBe(userId)
- 
 })
 
 test("GET -> 'URL_BASE', should status 200, res.body to be defined and res.body.length === 1", async () => {
@@ -74,7 +73,7 @@ test("GET -> 'URL_BASE', should status 200, res.body to be defined and res.body.
 
   expect(res.body[0].productId).toBeDefined()
   expect(res.body[0].productId).toBe(product.id)
-  
+
 
 })
 
